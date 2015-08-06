@@ -10,8 +10,8 @@
 #     f()
 
 # Here's an example that uses do_twice to call a function named print_spam twice.
-# def print_spam():
-#     print 'spam'
+def print_spam():
+    print 'spam'
 
 # do_twice(print_spam)
 
@@ -29,8 +29,19 @@
 # Write your functions below:
 # Body
 
+def do_twice(f,n):
+  if(n==1):
+    f()
+  else:      
+     f()
+     do_twice(f,n-1)
 
+def print_twice(s):
+     print(s)
+     print(s)
+     
 
+   
 
 
 
@@ -43,8 +54,10 @@ def main():
     do_four(print_twice, [some_value])
     """
     print("Hello World!")
-    
-
-
+    do_twice(print_spam,2)
+    s = raw_input()
+    print_twice(s)
+    s1="spam"
+    do_twice(print_twice(s1),2)
 if __name__ == "__main__":
     main()
